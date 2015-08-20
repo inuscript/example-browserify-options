@@ -4,11 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "default": "browserify -e ./src/entry1.js > build/default.js",
-    "exclude": "browserify -e ./src/entry1.js -u ./lib/*.js > build/exclude.js",
-    "external": "browserify -e ./src/entry1.js -x ./lib/*.js > build/external.js",
-    "require": "browserify -r ./lib/*.js > build/require.js",
-    "start": "npm run default; npm run external; npm run exclude ; npm run require;"
+    "start": "./start.sh"
   },
   "keywords": [],
   "author": "",
