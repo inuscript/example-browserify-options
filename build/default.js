@@ -28,9 +28,11 @@
         }
     }, {}],
     2: [function(require, module, exports) {
+        console.log("This is entry1")
         var lib = require("../lib/some-lib")
 
         lib()
+
     }, {
         "../lib/some-lib": 1
     }]
