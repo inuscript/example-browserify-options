@@ -28,8 +28,6 @@ require = (function e(t, n, r) {
         }
     }, {}],
     "/lib/for_exclusion.js": [function(require, module, exports) {
-        module.exports = function() {
-            console.log("THIS IS EXCUSION FILE")
-        }
+
     }, {}]
 }, {}, [1]);

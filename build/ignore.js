@@ -23,7 +23,9 @@
     return s
 })({
     1: [function(require, module, exports) {
-
+        module.exports = function() {
+            console.log("some-lib")
+        }
     }, {}],
     2: [function(require, module, exports) {
         console.log("This is entry1")
@@ -38,4 +40,4 @@
     }, {
         "../lib/some-lib": 1
     }]
-}, {}, [2]);
+}, {}, [1, 2]);

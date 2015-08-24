@@ -23,6 +23,11 @@
     return s
 })({
     1: [function(require, module, exports) {
+        module.exports = function() {
+            console.log("some-lib")
+        }
+    }, {}],
+    2: [function(require, module, exports) {
         console.log("This is entry1")
         var lib = require("../lib/some-lib")
 
@@ -33,6 +38,6 @@
         foo = "zoo" // foo === "zoo" VERY BAD PATTERN
 
     }, {
-        "../lib/some-lib": undefined
+        "../lib/some-lib": 1
     }]
-}, {}, [1]);
+}, {}, [1, 2]);
