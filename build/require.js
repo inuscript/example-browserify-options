@@ -22,11 +22,6 @@ require = (function e(t, n, r) {
     for (var o = 0; o < r.length; o++) s(r[o]);
     return s
 })({
-    "/lib/exclusion.js": [function(require, module, exports) {
-        module.exports = function() {
-            console.log("除外対象なファイルだよ！")
-        }
-    }, {}],
     "/lib/somelib.js": [function(require, module, exports) {
         module.exports = function() {
             console.log("somelibだよ！")

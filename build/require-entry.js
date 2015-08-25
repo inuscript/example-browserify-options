@@ -23,13 +23,11 @@
     return s
 })({
     1: [function(require, module, exports) {
-        console.log("entry2だよ！")
+        console.log("entry1だよ！")
         var lib = require("../lib/somelib")
-        var ex = require("../lib/exclusion")
         lib()
-        ex()
+
     }, {
-        "../lib/exclusion": "/lib/exclusion.js",
         "../lib/somelib": "/lib/somelib.js"
     }]
 }, {}, [1]);
