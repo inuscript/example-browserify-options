@@ -1,5 +1,0 @@
-console.log("entry2だよ！")
-var lib = require("../lib/somelib")
-var ex = require("../lib/exclusion")
-lib()
-ex()

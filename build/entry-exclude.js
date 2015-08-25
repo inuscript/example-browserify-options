@@ -28,16 +28,11 @@
         }
     }, {}],
     2: [function(require, module, exports) {
-
-    }, {}],
-    3: [function(require, module, exports) {
         console.log("entry2だよ！")
         var lib = require("../lib/somelib")
-        var ex = require("../lib/exclusion")
         lib()
-        ex()
+        standalone() // excludeされる。window.standaloneにstandaloneオプションで作ったやつがいる
     }, {
-        "../lib/exclusion": 2,
         "../lib/somelib": 1
     }]
-}, {}, [3]);
+}, {}, [2]);
