@@ -26,11 +26,11 @@
 
     }, {}],
     2: [function(require, module, exports) {
-        console.log("fs使うと")
-        var fs = require("fs")
-        var iconv = require("iconv")
+        console.log("entry1だよ！")
+        var lib = require("../lib/somelib")
+        lib()
+
     }, {
-        "fs": 1,
-        "iconv": 1
+        "../lib/somelib": 1
     }]
 }, {}, [2]);

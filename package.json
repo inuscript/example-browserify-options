@@ -18,6 +18,7 @@
     "prettyfy": "0.0.1"
   },
   "dependencies": {
+    "iconv": "^2.1.10",
     "jquery": "^2.1.4"
   }
 }

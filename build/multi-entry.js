@@ -21,4 +21,22 @@
     var i = typeof require == "function" && require;
     for (var o = 0; o < r.length; o++) s(r[o]);
     return s
-})({}, {}, []);
+})({
+    1: [function(require, module, exports) {
+        module.exports = function() {
+            console.log("somelibだよ！")
+        }
+    }, {}],
+    2: [function(require, module, exports) {
+        console.log("entry1だよ！")
+        var lib = require("../lib/somelib")
+        lib()
+
+    }, {
+        "../lib/somelib": 1
+    }],
+    3: [function(require, module, exports) {
+        console.log("entry3だよ！")
+
+    }, {}]
+}, {}, [2, 3]);
