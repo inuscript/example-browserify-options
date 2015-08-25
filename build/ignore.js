@@ -28,16 +28,22 @@
         }
     }, {}],
     2: [function(require, module, exports) {
-        console.log("This is entry1")
-        var lib = require("../lib/some-lib")
 
+    }, {}],
+    3: [function(require, module, exports) {
+        console.log("This is entry1")
+        var lib = require("../lib/somelib")
+        var ex = require("../lib/exclusion")
         lib()
+        ex()
 
         var baz = "vr" // baz === undefined
         window.hoge = "baz" // hoge === "baz"
         foo = "zoo" // foo === "zoo" VERY BAD PATTERN
 
+
     }, {
-        "../lib/some-lib": 1
+        "../lib/exclusion": 2,
+        "../lib/somelib": 1
     }]
-}, {}, [1, 2]);
+}, {}, [3]);

@@ -23,21 +23,19 @@
     return s
 })({
     1: [function(require, module, exports) {
-        module.exports = function() {
-            console.log("some-lib")
-        }
-    }, {}],
-    2: [function(require, module, exports) {
         console.log("This is entry1")
-        var lib = require("../lib/some-lib")
-
+        var lib = require("../lib/somelib")
+        var ex = require("../lib/exclusion")
         lib()
+        ex()
 
         var baz = "vr" // baz === undefined
         window.hoge = "baz" // hoge === "baz"
         foo = "zoo" // foo === "zoo" VERY BAD PATTERN
 
+
     }, {
-        "../lib/some-lib": 1
+        "../lib/exclusion": "/lib/exclusion.js",
+        "../lib/somelib": "/lib/somelib.js"
     }]
-}, {}, [1, 2]);
+}, {}, [1]);
