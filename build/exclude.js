@@ -24,21 +24,15 @@
 })({
     1: [function(require, module, exports) {
         module.exports = function() {
-            console.log("some-lib")
+            console.log("somelibだよ！")
         }
     }, {}],
     2: [function(require, module, exports) {
-        console.log("This is entry1")
+        console.log("entry2だよ！")
         var lib = require("../lib/somelib")
         var ex = require("../lib/exclusion")
         lib()
         ex()
-
-        var baz = "vr" // baz === undefined
-        window.hoge = "baz" // hoge === "baz"
-        foo = "zoo" // foo === "zoo" VERY BAD PATTERN
-
-
     }, {
         "../lib/exclusion": undefined,
         "../lib/somelib": 1

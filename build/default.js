@@ -24,28 +24,15 @@
 })({
     1: [function(require, module, exports) {
         module.exports = function() {
-            console.log("THIS IS EXCUSION FILE")
+            console.log("somelibだよ！")
         }
     }, {}],
     2: [function(require, module, exports) {
-        module.exports = function() {
-            console.log("some-lib")
-        }
-    }, {}],
-    3: [function(require, module, exports) {
-        console.log("This is entry1")
+        console.log("entry1だよ！")
         var lib = require("../lib/somelib")
-        var ex = require("../lib/exclusion")
         lib()
-        ex()
-
-        var baz = "vr" // baz === undefined
-        window.hoge = "baz" // hoge === "baz"
-        foo = "zoo" // foo === "zoo" VERY BAD PATTERN
-
 
     }, {
-        "../lib/exclusion": 1,
-        "../lib/somelib": 2
+        "../lib/somelib": 1
     }]
-}, {}, [3]);
+}, {}, [2]);

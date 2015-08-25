@@ -23,17 +23,11 @@
     return s
 })({
     1: [function(require, module, exports) {
-        console.log("This is entry1")
+        console.log("entry2だよ！")
         var lib = require("../lib/somelib")
         var ex = require("../lib/exclusion")
         lib()
         ex()
-
-        var baz = "vr" // baz === undefined
-        window.hoge = "baz" // hoge === "baz"
-        foo = "zoo" // foo === "zoo" VERY BAD PATTERN
-
-
     }, {
         "../lib/exclusion": "/lib/exclusion.js",
         "../lib/somelib": "/lib/somelib.js"

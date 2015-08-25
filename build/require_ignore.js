@@ -27,7 +27,7 @@ require = (function e(t, n, r) {
     }, {}],
     "/lib/somelib.js": [function(require, module, exports) {
         module.exports = function() {
-            console.log("some-lib")
+            console.log("somelibだよ！")
         }
     }, {}]
 }, {}, []);

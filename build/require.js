@@ -24,12 +24,12 @@ require = (function e(t, n, r) {
 })({
     "/lib/exclusion.js": [function(require, module, exports) {
         module.exports = function() {
-            console.log("THIS IS EXCUSION FILE")
+            console.log("除外対象なファイルだよ！")
         }
     }, {}],
     "/lib/somelib.js": [function(require, module, exports) {
         module.exports = function() {
-            console.log("some-lib")
+            console.log("somelibだよ！")
         }
     }, {}]
 }, {}, []);
