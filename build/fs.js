@@ -23,9 +23,12 @@
     return s
 })({
     1: [function(require, module, exports) {
-        var ex = require("../lib/exclusion")
-        console.log(ex)
+
+    }, {}],
+    2: [function(require, module, exports) {
+        console.log("fs使うと")
+        var fs = require("fs")
     }, {
-        "../lib/exclusion": undefined
+        "fs": 1
     }]
-}, {}, [1]);
+}, {}, [2]);
