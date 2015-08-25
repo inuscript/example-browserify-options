@@ -2,6 +2,7 @@
 PATH="./node_modules/.bin":$PATH
 rm -rf build
 mkdir build
+browserify ./src/entry.js | js-beautify -f - > build/no-entry.js
 browserify -e ./src/entry.js | js-beautify -f - > build/default.js
 
 browserify -r ./lib/somelib.js | js-beautify -f - > build/require.js
@@ -15,7 +16,8 @@ browserify -r ./lib/somelib.js -r ./lib/exclusion.js -i ./lib/exclusion.js | js-
 browserify -e ./src/fs.js | js-beautify -f - >  build/fs.js
 
 browserify -r jquery -s jquery > build/jquery-bundle.js
-browserify -e ./src/entry-jquery.js -x jquery | js-beautify -f - > build/entry-jquery.js
+# browserify -r ./lib/somelib.js -x jquery　| js-beautify -f - > build/require-bundle.js
+browserify ./src/entry-jquery.js -x jquery | js-beautify -f - > build/entry-jquery.js
 
 # error.
 # browserify -r ./lib/*.js -u ./lib/exclusion.js | js-beautify -f - > build/require_exclude.js

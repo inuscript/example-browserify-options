@@ -28,12 +28,11 @@
         }
     }, {}],
     2: [function(require, module, exports) {
-        var $ = require("jquery")
+        console.log("entry1だよ！")
         var lib = require("../lib/somelib")
         lib()
-        console.log($(".foo"))
+
     }, {
-        "../lib/somelib": 1,
-        "jquery": "jquery"
+        "../lib/somelib": 1
     }]
 }, {}, [2]);

@@ -1,2 +1,4 @@
 var $ = require("jquery")
-$(".foo")
+var lib = require("../lib/somelib")
+lib()
+console.log($(".foo"))

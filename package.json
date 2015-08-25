@@ -6,6 +6,9 @@
   "scripts": {
     "start": "./start.sh"
   },
+  "browser": {
+    "jquery": "jquery"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
