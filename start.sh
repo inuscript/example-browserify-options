@@ -14,5 +14,8 @@ browserify ./lib/standalone.js --standalone standalone | js-beautify -f - >  bui
 browserify -r ./lib/somelib.js -r ./lib/exclusion.js -i ./lib/exclusion.js | js-beautify -f - > build/require_ignore.js
 browserify -e ./src/fs.js | js-beautify -f - >  build/fs.js
 
+browserify -r jquery -s jquery > build/jquery-bundle.js
+browserify -e ./src/entry-jquery.js -x jquery | js-beautify -f - > build/entry-jquery.js
+
 # error.
 # browserify -r ./lib/*.js -u ./lib/exclusion.js | js-beautify -f - > build/require_exclude.js
