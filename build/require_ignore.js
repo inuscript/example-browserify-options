@@ -27,7 +27,7 @@ require = (function e(t, n, r) {
             console.log("some-lib")
         }
     }, {}],
-    "/lib/for_exclusion.js": [function(require, module, exports) {
+    "/lib/exclusion.js": [function(require, module, exports) {
 
     }, {}]
 }, {}, [1]);
